@@ -6,7 +6,7 @@ This is a simple image processing method of visual vertical (VV) estimation for 
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/15242269/154702863-8b8a9a42-6a54-41da-8eb0-8caa96d4ab54.png">
 <img width="655" alt="image" src="https://user-images.githubusercontent.com/15242269/154703081-87a4c189-063b-4533-aed8-81edb068ec24.png">
 
-### ArXiv
+### arXiv
 https://arxiv.org/abs/2202.06299
 
 ### ResearchGate
