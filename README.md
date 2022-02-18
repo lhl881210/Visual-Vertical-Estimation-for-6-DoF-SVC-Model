@@ -66,7 +66,10 @@ if not, the estemated VV data will be not saved in a CSV file!!!
 ### Output
 #### The estemated VV data in a CSV file
 The CSV file incluse following information:
+
 [frame number, VV_acc_x[m/s^2]，VV_acc_y[m/s^2]，VV_acc_rad，VV_acc_dig]
+
+The angle of VV is in [30,150] degree.
 
 #### MP4 file
 <img width="639" alt="image" src="https://user-images.githubusercontent.com/15242269/154701599-9af8bea4-ffaa-4c89-94e0-d5971227189e.png">
