@@ -198,17 +198,16 @@ def main(argv):
     for opt, arg in opts:
         if opt == '-h':
             print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
-            print('Exmple 1: VV_for_SVC.py -i ./test.mp4')
-            print('Exmple 2: VV_for_SVC.py --camera True --camera_port 0')
+            print('Exmple 1: VV_for_SVC.py -i ./test.mp4 --scale 2')
+            print('Exmple 2: VV_for_SVC.py --camera True --camera_port 0 --scale 1')
             sys.exit()
         elif opt in ("-i", "--inputfile"):
             filename = arg
         elif opt in ("-c", "--camera"):
             if arg=="True":
                 filename="camera"
-                scale = 1
                 if opt in ("-cp", "--camera_port"):
-                    CAMERA_NO = arg
+                    CAMERA_NO = int(arg)
         elif opt in ("-s", "--scale"):
             scale=int(arg)
     VV(filename, scale)
