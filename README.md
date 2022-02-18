@@ -10,7 +10,7 @@ This is a simple image processing method of visual vertical (VV) estimation for 
 https://arxiv.org/abs/2202.06299
 
 ### ResearchGate
-https://www.researchgate.net/profile/Hailong-Liu-2
+https://www.researchgate.net/publication/358703507
 
 ### BibTeX
 ```bash
