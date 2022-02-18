@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 import pandas as pd
-import os
+import sys,getopt
 import datetime
 
 
@@ -188,24 +188,37 @@ def VV(filename,scale):
     cv2.destroyAllWindows()
 
 
-
+def main(argv):
+    global filename,scale,CAMERA,CAMERA_NO
+    try:
+        opts, args = getopt.getopt(argv, "hi:c:cp:s:", ["inputfile=", "camera=","camera_port=","scale="])
+    except getopt.GetoptError:
+        print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
+            print('Exmple 1: VV_for_SVC.py -i ./test.mp4')
+            print('Exmple 2: VV_for_SVC.py --camera True --camera_port 0')
+            sys.exit()
+        elif opt in ("-i", "--inputfile"):
+            filename = arg
+        elif opt in ("-c", "--camera"):
+            if arg=="True":
+                filename="camera"
+                scale = 1
+                if opt in ("-cp", "--camera_port"):
+                    CAMERA_NO = arg
+        elif opt in ("-s", "--scale"):
+            scale=int(arg)
+    VV(filename, scale)
 
 if __name__ == "__main__":
-
-
     ################
-    CAMERA=False
-    CAMERA_NO=0
-    scale=1
+    CAMERA = False
+    CAMERA_NO = 0
+    scale = 2
     kernel = np.ones((3, 3), np.uint8)
+    filename="./test.mp4"
     ##############
-
-    if CAMERA==False:
-        scale = 2
-        filename="./test.mp4"
-        VV(filename,scale)
-
-    elif CAMERA==True:
-
-        filename="camera"
-        VV(filename, scale)
+    main(sys.argv[1:])
