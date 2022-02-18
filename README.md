@@ -1,2 +1,56 @@
 # Visual-Vertical-Estimation-for-6-DoF-SVC-Model
-A Simple Method of Visual Vertical Estimation for 6 DoF SVC Model
+
+This is a simple image processing method of visual vertical (VV) estimation for 6 DoF SVC Model.
+
+## Paper
+Motion Sickness Modeling with Visual Vertical Estimation and Its Application to Autonomous Personal Mobility Vehicles
+
+```bash
+@misc{liu2022motion,
+    title={Motion Sickness Modeling with Visual Vertical Estimation and Its Application to Autonomous Personal Mobility Vehicles},
+    author={Hailong Liu and Shota Inoue and Takahiro Wada},
+    year={2022},
+    eprint={2202.06299},
+    archivePrefix={arXiv},
+    primaryClass={cs.HC}
+}
+```
+
+## Python packages request
+
+```bash
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
+import pandas as pd
+import sys,getopt
+import datetime
+```
+
+## Usage
+```bash
+$ python VV_for_SVC.py -i <inputfile> --camera <True/False> --camera_port <port number> --scale <1>
+```
+-i: input file.
+
+--camera True: if using a camera.
+
+--camera_port 0: if the camera port is 0.
+
+--scale 2: if you want to change the image resolution to 1/2 of the original resolution. (even number is recommended)
+
+### Exmple 1: input a video file (mp4 or avi)
+```bash
+$ python VV_for_SVC.py -i test.mp4 --scale 1
+```
+
+### Exmple 2: using a camera with port 0
+```bash
+$ python VV_for_SVC.py --camera True --camera_port 0 --scale 1
+```
+### NOTE
+Please stop the program by pushing the "ESC" key!!!
+
+if not, the estemated VV data will be not saved in a CSV file!!!
+
+
