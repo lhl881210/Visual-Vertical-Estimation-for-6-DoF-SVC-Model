@@ -61,11 +61,11 @@ $ python VV_for_SVC.py --camera True --camera_port 0 --scale 1
 ### NOTE
 Please stop the program by pushing the "ESC" key!!!
 
-if not, the estemated VV data will be not saved in a CSV file!!!
+If not, the estemated VV data will NOT BE SAVED in a CSV file when you using a CAMERA!!!
 
 ### Output
 #### The estemated VV data in a CSV file
-The CSV file incluse following information:
+The CSV file includes following information:
 
 [frame number, VV_acc_x[m/s^2]，VV_acc_y[m/s^2]，VV_acc_rad，VV_acc_dig]
 
