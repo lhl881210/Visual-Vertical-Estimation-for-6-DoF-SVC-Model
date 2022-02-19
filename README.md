@@ -1,6 +1,6 @@
 # Visual-Vertical-Estimation-for-6-DoF-SVC-Model
 
-This is a simple image processing method of visual vertical (VV) estimation for 6 DoF SVC Model.
+This is a very simple image processing method of visual vertical (VV) estimation for 6 DoF SVC Model.
 
 ## Paper
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/15242269/154702863-8b8a9a42-6a54-41da-8eb0-8caa96d4ab54.png">
