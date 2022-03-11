@@ -12,7 +12,8 @@ https://arxiv.org/abs/2202.06299
 ### ResearchGate
 https://www.researchgate.net/publication/358703507
 
-### BibTeX
+### Citation
+If you use this visual vertical estimation method in a research project, please cite as follows:
 ```bash
 @misc{liu2022motion,
     title={Motion Sickness Modeling with Visual Vertical Estimation and Its Application to Autonomous Personal Mobility Vehicles},
