@@ -102,6 +102,7 @@ def VV(filename,scale):
           VV=(VV_best_1*(hog_hist_180[VV_best_1]/Sum_VV_samples)
                +VV_best_2*(hog_hist_180[VV_best_2]/Sum_VV_samples)
                +VV_best_3*(hog_hist_180[VV_best_3]/Sum_VV_samples))+30
+          if np.isnan(VV): VV=VV_m_1
           VV=(0.7*VV+0.3*VV_m_1)
           VV_all = np.append(VV_all, VV)
           VV_m_1=VV
@@ -190,26 +191,30 @@ def VV(filename,scale):
 
 def main(argv):
     global filename,scale,CAMERA,CAMERA_NO
-    try:
-        opts, args = getopt.getopt(argv, "hi:c:cp:s:", ["inputfile=", "camera=","camera_port=","scale="])
-    except getopt.GetoptError:
-        print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
+    if CAMERA == True:
+        filename = "camera"
+    else:
+        try:
+            opts, args = getopt.getopt(argv, "hi:c:cp:s:", ["inputfile=", "camera=","camera_port=","scale="])
+        except getopt.GetoptError:
             print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
-            print('Exmple 1: VV_for_SVC.py -i ./test.mp4 --scale 2')
-            print('Exmple 2: VV_for_SVC.py --camera True --camera_port 0 --scale 1')
-            sys.exit()
-        elif opt in ("-i", "--inputfile"):
-            filename = arg
-        elif opt in ("-c", "--camera"):
-            if arg=="True":
-                filename="camera"
-                if opt in ("-cp", "--camera_port"):
-                    CAMERA_NO = int(arg)
-        elif opt in ("-s", "--scale"):
-            scale=int(arg)
+            sys.exit(2)
+        for opt, arg in opts:
+            if opt == '-h':
+                print('VV_for_SVC.py -i <inputfile> -camera <True/False> -camera_port <port number>')
+                print('Exmple 1: VV_for_SVC.py -i ./test.mp4 --scale 2')
+                print('Exmple 2: VV_for_SVC.py --camera True --camera_port 0 --scale 1')
+                sys.exit()
+            elif opt in ("-i", "--inputfile"):
+                filename = arg
+            elif opt in ("-c", "--camera"):
+                if arg=="True":
+                    filename="camera"
+                    if opt in ("-cp", "--camera_port"):
+                        CAMERA_NO = int(arg)
+            elif opt in ("-s", "--scale"):
+                scale=int(arg)
+
     VV(filename, scale)
 
 if __name__ == "__main__":
