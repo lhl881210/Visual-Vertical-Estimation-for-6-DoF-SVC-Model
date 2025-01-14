@@ -15,6 +15,16 @@ https://www.researchgate.net/publication/358703507
 ### Citation
 If you use this visual vertical estimation method in a research project, please cite as follows:
 ```bash
+@ARTICLE{liu2024_TTIS,
+  title={Subjective Vertical Conflict Model With Visual Vertical: Predicting Motion Sickness on Autonomous Personal Mobility Vehicles}, 
+  author={Liu, Hailong and Inoue, Shota and Wada, Takahiro},
+  journal={IEEE Transactions on Intelligent Transportation Systems},
+  year={2024},
+  volume={25},
+  number={8},
+  pages={9878-9894},
+  doi={10.1109/TITS.2024.3357170}}
+
 @misc{liu2022motion,
     title={Motion Sickness Modeling with Visual Vertical Estimation and Its Application to Autonomous Personal Mobility Vehicles},
     author={Hailong Liu and Shota Inoue and Takahiro Wada},
