@@ -1,19 +1,13 @@
 # Visual-Vertical-Estimation-for-6-DoF-SVC-Model
 
 This is a very simple image processing method of visual vertical (VV) estimation for 6 DoF SVC Model.
-
-## Paper
-<img width="555" alt="image" src="https://user-images.githubusercontent.com/15242269/154702863-8b8a9a42-6a54-41da-8eb0-8caa96d4ab54.png">
 <img width="655" alt="image" src="https://user-images.githubusercontent.com/15242269/154703081-87a4c189-063b-4533-aed8-81edb068ec24.png">
-
-### arXiv
-https://arxiv.org/abs/2202.06299
-
-### ResearchGate
-https://www.researchgate.net/publication/358703507
 
 ### Citation
 If you use this visual vertical estimation method in a research project, please cite as follows:
+
+https://www.researchgate.net/publication/378040570
+
 ```bash
 @ARTICLE{liu2024_TTIS,
   title={Subjective Vertical Conflict Model With Visual Vertical: Predicting Motion Sickness on Autonomous Personal Mobility Vehicles}, 
@@ -24,7 +18,9 @@ If you use this visual vertical estimation method in a research project, please 
   number={8},
   pages={9878-9894},
   doi={10.1109/TITS.2024.3357170}}
-
+```
+https://www.researchgate.net/publication/358703507
+```bash
 @misc{liu2022motion,
     title={Motion Sickness Modeling with Visual Vertical Estimation and Its Application to Autonomous Personal Mobility Vehicles},
     author={Hailong Liu and Shota Inoue and Takahiro Wada},
